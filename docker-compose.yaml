@@ -1,0 +1,11 @@
+services:
+  dental-graph:
+    container_name: dental-graph
+    image: jakouribe/odontoapp-dental-graph:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3002:3002
+    environment:
+      MONGO_URI: mongodb://u-odontoapp:v97ZUky4jKlT9qT6U9Az@44.205.1.77:27017/
